@@ -1,4 +1,5 @@
 content/system.json
 output/*
+content/js/bundle.js
 
 !output/.gitkeep 
