@@ -1,4 +1,10 @@
-body { background-color: #ffffff; }
-h1 {
-    color: red;
+body {
+    background-color: #ffffff;
+    background-image: url("../img/bg.jpg");
+}
+.bottom-right {
+    position: absolute;
+    bottom: 150px;
+    right: 50px;
+    color: white;
 }
