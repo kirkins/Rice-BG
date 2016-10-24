@@ -6,7 +6,7 @@ browserify content/js/scripts.js -o content/js/bundle.js
 Xaxis=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
 Yaxis=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
 WinSize=$Xaxis"px*"$Yaxis"px"
-# Convert the html/js into a png image.
+# Convert the html/js into a jpg image.
 phantomjs scripts/rasterize.js content/index.html output/home.jpg $WinSize
 # Set the image as background using feh
 feh --bg-fill output/home.jpg
