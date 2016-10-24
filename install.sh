@@ -1,7 +1,7 @@
 # Check if feh is installed
 hash feh &> /dev/null
 if [ $? -eq 1 ]; then
-  echo >&2 "feh not found. Please google how to install feh on your OS."
+  echo >&2 "feh not found. Please search how to install feh on your OS."
   exit
 fi
 
