@@ -7,7 +7,7 @@ Xaxis=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
 Yaxis=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
 WinSize=$Xaxis"px*"$Yaxis"px"
 # Convert the html/js into a png image.
-phantomjs scripts/rasterize.js content/index.html output/home.png $WinSize
+phantomjs scripts/rasterize.js content/index.html output/home.jpg $WinSize
 # Set the image as background using feh
-feh --bg-fill output/home.png
+feh --bg-fill output/home.jpg
 
