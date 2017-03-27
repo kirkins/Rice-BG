@@ -1,17 +1,20 @@
-#Rice BG
+# Rice BG
 
 Rice BG generates a json object with linux system info and passes that info
 into a javascript file. We then use html/javascript to dynamically create
 a background image using phantomjs. After the jpg is created we use feh to
 set system background. 
 
-#Requirments
+Currently working on having this add half transparent black boxes to any background image for use with Manjaro i3-wm:
 
--feh
 
--npm
 
-#Instructions
+## Requirments
+
+* feh
+* npm
+
+## Instructions
 
 After you download and cd into the directory do the following:
 
