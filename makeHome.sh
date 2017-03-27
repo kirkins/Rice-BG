@@ -11,6 +11,10 @@ while getopts 'bh' flag; do
     *) error "Unexpected option ${flag}" ;;
   esac
 done
+shift "$((OPTIND - 1))"
+
+# Copy image input into content images folder
+cp $1 content/img/bg.jpg;
 
 # Create JSON file with system info in json
 
@@ -25,4 +29,3 @@ WinSize=$Xaxis"px*"$Yaxis"px"
 phantomjs scripts/rasterize.js content/index.html output/home.jpg $WinSize
 # Set the image as background using feh
 feh --bg-fill output/home.jpg
-
