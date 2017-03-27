@@ -1,9 +1,8 @@
-boxes=''
-jsonText=''
+boxes=false
 
 while getopts 'bh' flag; do
   case "${flag}" in
-    b) boxes= 'true' ;;
+    b) boxes='true' ;;
     h) echo "options:"
        echo "-h, --help                show brief help"
        echo '-b                        add black boxes for monjaro'
@@ -18,7 +17,13 @@ cp $1 content/img/bg.jpg;
 
 # Create JSON file with system info in json
 
-echo '{"user": "'$USER'","ostype": "'$OSTYPE'"}' > content/system.json 
+JSON='{'
+JSON+='"user": "'$USER'"'
+JSON+=', "ostype": "'$OSTYPE'"'
+JSON+=', "boxes": "'$boxes'"'
+JSON+='}'
+
+echo $JSON > content/system.json 
 # Bundle javascript, so we can use some node.js syntax
 browserify content/js/scripts.js -o content/js/bundle.js
 # Get the screen size

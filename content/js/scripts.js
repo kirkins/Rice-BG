@@ -5,6 +5,7 @@ var system = require('../system.json');
 var html = '<div class="bottom-right">';
 html += '<div class="user">'+system.user+'</div>';
 html += '<div class="ostype">'+system.ostype+'</div>';
+html += '<div class="ostype">'+system.boxes+'</div>';
 html += '</div>';
-if(system.boxes==true) html += '<div id="topSquare"></div><div id="bottomSquare"></div>';
+if(system.boxes=="true") html += '<div id="topSquare"></div><div id="bottomSquare"></div>';
 document.body.innerHTML += html;
