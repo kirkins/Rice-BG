@@ -1,4 +1,16 @@
+boxes=''
+jsonText=''
+
+while getopts 'bh' flag; do
+  case "${flag}" in
+    b) boxes= 'true' ;;
+    h) echo 'add help message here' ;;
+    *) error "Unexpected option ${flag}" ;;
+  esac
+done
+
 # Create JSON file with system info in json
+
 echo '{"user": "'$USER'","ostype": "'$OSTYPE'"}' > content/system.json 
 # Bundle javascript, so we can use some node.js syntax
 browserify content/js/scripts.js -o content/js/bundle.js
