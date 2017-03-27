@@ -4,7 +4,10 @@ jsonText=''
 while getopts 'bh' flag; do
   case "${flag}" in
     b) boxes= 'true' ;;
-    h) echo 'add help message here' ;;
+    h) echo "options:"
+       echo "-h, --help                show brief help"
+       echo '-b                        add black boxes for monjaro'
+       ;;
     *) error "Unexpected option ${flag}" ;;
   esac
 done
