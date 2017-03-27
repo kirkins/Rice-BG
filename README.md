@@ -7,7 +7,7 @@ set system background.
 
 Currently working on having this add half transparent black boxes to any background image for use with Manjaro i3-wm:
 
-
+![screenshot](_README/screen.png)
 
 ## Requirments
 
