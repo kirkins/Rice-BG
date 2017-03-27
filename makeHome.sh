@@ -3,9 +3,13 @@ boxes=false
 while getopts 'bh' flag; do
   case "${flag}" in
     b) boxes='true' ;;
-    h) echo "options:"
+    h) echo "usage:"
+       echo "./makeHome image.jpg"
+       echo ""
+       echo "options:"
        echo "-h, --help                show brief help"
-       echo '-b                        add black boxes for monjaro'
+       echo '-b                        add black boxes for monjaro i3-wm'
+       exit
        ;;
     *) error "Unexpected option ${flag}" ;;
   esac
