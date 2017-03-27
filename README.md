@@ -16,8 +16,8 @@ Currently working on having this add half transparent black boxes to any backgro
 
 ## Instructions
 
-After you download and cd into the directory and run './install.sh':
+After you download and cd into the directory and run `./install.sh`:
 
-You can set an image as your background with './makeHome.sh yourImage.jpg'
+You can set an image as your background with `./makeHome.sh yourImage.jpg`
 
-Add the -b flag if you want to add the black boxes as shown below './makeHome.sh -b yourImage.jpg'
+Add the -b flag if you want to add the black boxes as shown below `./makeHome.sh -b yourImage.jpg`
